@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Main page</title>
+</head>
+<body>
+    <header>
+        <a class = "skip" href="#main">Skip to Main content</a>
+    </header>
+        <nav>
+            <ul>
+                <li><a href = "index.html" class="menu-link">Current page</a></li>
+                <li><a href = "pets.html" class="menu-link">Pets</a></li>
+                <li><a href = "recipes.html" class="menu-link">Recipes</a></li>
+                <li><a href ="travel.html" class="menu-link">Travel</a></li>
+            </ul>
+        </nav>
+        <h1>Jessie's Personal Website</h1>
+    <main id="main">
+        <div>
+            <p>Welcome to Jessie's personal photo gallery, your go-to destination for all things pets, recipes, and travel! Explore a world of captivating content where we cater to your love for furry companions, culinary delights, and globetrotting adventures. </p>
+        </div>
+
+<div>In this website, there will be three main contents, which are my favorite pets, favorite travel places, and favorite recipes.</div>          
+
+
+     <!-- Music Button -->
+     <button class="music-button" onclick="toggleMusic()">Play Music</button>
+     <audio id="background-music" loop>
+         <source src="perfect-beauty-191271.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+     </audio>
+
+     <script>
+         function toggleMusic() {
+             var music = document.getElementById("background-music");
+             var button = document.querySelector(".music-button");
+             
+             if (music.paused) {
+                 music.play();
+                 button.textContent = "Pause Music";
+             } else {
+                 music.pause();
+                 button.textContent = "Play Music";
+             }
+         }
+
+if (window.matchMedia("(min-width: 1000px)").matches) {
+    
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#1e854b';
+            this.style.color = '#ffffff'; 
+        });
+
+        link.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#2ac36d';
+            this.style.color = '#ffffff'; 
+        });
+    });
+}
+
+if (window.matchMedia("(min-width: 1000px)").matches) {
+    // Select all menu links
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            menuLinks.forEach(item => {
+                item.classList.remove('active');
+            });
+            this.classList.add('active');
+            
+            alert(`You clicked on: ${this.textContent}`);
+        });
+    });
+}
+     </script>
+     <!-- Jackie Wolf -->
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+ </main>
+
+</body>
+</html>
