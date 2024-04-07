@@ -55,7 +55,7 @@ body{
     .music-button {
         font-size: 20px;
         padding: 10px 20px;
-        background-color: #ff0000; 
+        background-color: #51596b; 
         color: #ffffff; 
         border: none;
         border-radius: 5px;
@@ -133,6 +133,6 @@ body{
         grid-gap: 30px; 
     }
 
-
  }
+
 
